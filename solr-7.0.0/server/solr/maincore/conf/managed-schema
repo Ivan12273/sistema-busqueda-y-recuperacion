@@ -419,9 +419,12 @@
   <field name="_version_" type="plong" indexed="false" stored="false"/>
   <field name="author" type="text_general"/>
   <field name="content_encoding" type="text_general"/>
+  <field name="content_location" type="text_general"/>
   <field name="content_type" type="text_general"/>
+  <field name="content_type_hint" type="text_general"/>
   <field name="dc_title" type="text_general"/>
   <field name="description" type="text_general"/>
+  <field name="generator" type="text_general"/>
   <field name="id" type="string" multiValued="false" indexed="true" required="true" stored="true"/>
   <field name="keywords" type="text_general"/>
   <field name="revised" type="pdates"/>
@@ -507,4 +510,7 @@
   <copyField source="title" dest="title_str" maxChars="256"/>
   <copyField source="url" dest="url_str" maxChars="256"/>
   <copyField source="x_ua_compatible" dest="x_ua_compatible_str" maxChars="256"/>
+  <copyField source="content_location" dest="content_location_str" maxChars="256"/>
+  <copyField source="generator" dest="generator_str" maxChars="256"/>
+  <copyField source="content_type_hint" dest="content_type_hint_str" maxChars="256"/>
 </schema>
