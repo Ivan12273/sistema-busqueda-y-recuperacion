@@ -98,3 +98,74 @@
 2021-01-22 22:59:08.396 INFO  (qtp1282788025-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611356344078} status=0 QTime=0
 2021-01-22 22:59:08.434 INFO  (qtp1282788025-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611356344079} status=0 QTime=36
 2021-01-22 22:59:15.167 INFO  (qtp1282788025-19) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=matematicas&_=1611356348374} hits=1 status=0 QTime=26
+2021-01-23 03:13:26.013 INFO  (qtp1282788025-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611371605870} status=0 QTime=2
+2021-01-23 03:13:26.071 INFO  (qtp1282788025-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611371605871} status=0 QTime=62
+2021-01-23 03:13:29.504 INFO  (qtp1282788025-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611371609308} status=0 QTime=0
+2021-01-23 03:13:29.559 INFO  (qtp1282788025-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611371609308} status=0 QTime=53
+2021-01-23 03:16:57.460 INFO  (qtp1282788025-19) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website&_=1611371609465} hits=2 status=0 QTime=1
+2021-01-23 03:18:51.926 INFO  (qtp1282788025-21) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={_=1611371609465} hits=0 status=0 QTime=46
+2021-01-23 03:19:43.557 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website&wt=php&_=1611371609465} hits=2 status=0 QTime=46
+2021-01-23 03:19:56.257 INFO  (qtp1282788025-21) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website&wt=json&_=1611371609465} hits=2 status=0 QTime=1
+2021-01-23 03:20:02.684 INFO  (qtp1282788025-19) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website&_=1611371609465} hits=2 status=0 QTime=0
+2021-01-23 03:20:03.956 INFO  (qtp1282788025-20) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website&_=1611371609465} hits=2 status=0 QTime=0
+2021-01-23 03:22:02.787 INFO  (qtp1282788025-16) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website+matematicas&_=1611371609465} hits=3 status=0 QTime=14
+2021-01-23 03:22:16.060 INFO  (qtp1282788025-20) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website+or+matematicas&_=1611371609465} hits=3 status=0 QTime=57
+2021-01-23 03:22:25.254 INFO  (qtp1282788025-17) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website+and+matematicas&_=1611371609465} hits=3 status=0 QTime=3
+2021-01-23 03:25:06.274 INFO  (qtp1282788025-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611371609308} status=0 QTime=0
+2021-01-23 03:25:06.293 INFO  (qtp1282788025-19) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1611372306239} status=0 QTime=13
+2021-01-23 03:25:06.378 INFO  (qtp1282788025-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611371609308} status=0 QTime=98
+2021-01-23 03:25:08.936 INFO  (qtp1282788025-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611371609308} status=0 QTime=0
+2021-01-23 03:25:09.003 INFO  (qtp1282788025-37) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611371609308} status=0 QTime=67
+2021-01-23 03:29:26.142 INFO  (qtp1282788025-17) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=websites%26matematicas&_=1611371609465} hits=1 status=0 QTime=2
+2021-01-23 03:29:33.627 INFO  (qtp1282788025-37) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=websites||matematicas&_=1611371609465} hits=1 status=0 QTime=1
+2021-01-23 03:29:54.494 INFO  (qtp1282788025-23) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={fq=websites&fq=matematicas&_=1611371609465} hits=0 status=0 QTime=61
+2021-01-23 03:30:04.842 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={fq=websites&_=1611371609465} hits=0 status=0 QTime=1
+2021-01-23 03:30:15.295 INFO  (qtp1282788025-22) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={fq=websites&fq=matematicas&_=1611371609465} hits=0 status=0 QTime=0
+2021-01-23 03:30:20.081 INFO  (qtp1282788025-21) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=matematicas&fq=websites&fq=matematicas&_=1611371609465} hits=0 status=0 QTime=86
+2021-01-23 03:30:26.428 INFO  (qtp1282788025-17) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=matematicas&fq=websites&_=1611371609465} hits=0 status=0 QTime=2
+2021-01-23 03:30:31.804 INFO  (qtp1282788025-37) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=matematicas&fq=matematicas&_=1611371609465} hits=1 status=0 QTime=2
+2021-01-23 03:30:46.764 INFO  (qtp1282788025-23) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=matematicas&fq=Joomla&_=1611371609465} hits=1 status=0 QTime=2
+2021-01-23 03:30:49.370 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=matematicas&fq=Joomla&_=1611371609465} hits=1 status=0 QTime=1
+2021-01-23 03:30:54.971 INFO  (qtp1282788025-22) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=web&fq=Joomla&_=1611371609465} hits=1 status=0 QTime=1
+2021-01-23 03:30:59.787 INFO  (qtp1282788025-21) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=web&_=1611371609465} hits=3 status=0 QTime=1
+2021-01-23 03:31:37.983 INFO  (qtp1282788025-17) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=apache&_=1611371609465} hits=2 status=0 QTime=0
+2021-01-23 03:31:49.328 INFO  (qtp1282788025-37) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=apache&fq=lucene&_=1611371609465} hits=2 status=0 QTime=1
+2021-01-23 03:32:05.422 INFO  (qtp1282788025-23) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=apache&fq=factorpad&_=1611371609465} hits=1 status=0 QTime=47
+2021-01-23 03:32:13.630 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=apache&_=1611371609465} hits=2 status=0 QTime=0
+2021-01-23 03:32:45.736 INFO  (qtp1282788025-22) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=apache&fq=tika&_=1611371609465} hits=1 status=0 QTime=1
+2021-01-23 03:33:03.246 INFO  (qtp1282788025-21) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=matematicas&_=1611371609465} hits=1 status=0 QTime=0
+2021-01-23 03:33:17.878 INFO  (qtp1282788025-17) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website&_=1611371609465} hits=2 status=0 QTime=0
+2021-01-23 03:33:26.910 INFO  (qtp1282788025-37) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=web&_=1611371609465} hits=3 status=0 QTime=0
+2021-01-23 03:33:34.759 INFO  (qtp1282788025-23) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=web&fq=matematicas&_=1611371609465} hits=1 status=0 QTime=1
+2021-01-23 03:33:40.670 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=web&_=1611371609465} hits=3 status=0 QTime=0
+2021-01-23 03:33:46.007 INFO  (qtp1282788025-22) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=web&fq=solr&_=1611371609465} hits=2 status=0 QTime=1
+2021-01-23 03:33:53.624 INFO  (qtp1282788025-21) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=web&fq=solr&fq=factorpad&_=1611371609465} hits=1 status=0 QTime=1
+2021-01-23 03:36:39.690 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=web&fq=factorpad&fq=solr} hits=1 status=0 QTime=1
+2021-01-23 03:36:48.731 INFO  (qtp1282788025-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611373008320} status=0 QTime=1
+2021-01-23 03:36:48.852 INFO  (qtp1282788025-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611373008321} status=0 QTime=117
+2021-01-23 03:36:52.081 INFO  (qtp1282788025-37) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=*:*&_=1611373008582} hits=3 status=0 QTime=1
+2021-01-23 03:36:59.627 INFO  (qtp1282788025-16) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=web&fq=factorpad&fq=solr} hits=1 status=0 QTime=1
+2021-01-23 03:38:01.963 INFO  (qtp1282788025-19) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=web&fq=solr&fq=factorpad&_=1611373008582} hits=1 status=0 QTime=1
+2021-01-23 03:40:47.232 INFO  (qtp1282788025-16) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=web+solr+factorpad&_=1611373008582} hits=3 status=0 QTime=3
+2021-01-23 03:44:33.980 INFO  (qtp1282788025-20) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q="web"+AND+"solr"&_=1611373008582} hits=2 status=0 QTime=2
+2021-01-23 03:44:34.833 INFO  (qtp1282788025-16) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q="web"+AND+"solr"&_=1611373008582} hits=2 status=0 QTime=1
+2021-01-23 03:45:02.620 INFO  (qtp1282788025-17) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q="web"+AND+"solr"+AND+"factorpad"&_=1611373008582} hits=1 status=0 QTime=2
+2021-01-23 03:45:14.158 INFO  (qtp1282788025-22) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q="web"+AND+"solr"+AND+"factorpad"} hits=1 status=0 QTime=1
+2021-01-23 03:45:17.656 INFO  (qtp1282788025-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611373517396} status=0 QTime=0
+2021-01-23 03:45:17.742 INFO  (qtp1282788025-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611373517397} status=0 QTime=85
+2021-01-23 03:45:19.867 INFO  (qtp1282788025-16) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=*:*&_=1611373517539} hits=3 status=0 QTime=0
+2021-01-23 03:45:25.721 INFO  (qtp1282788025-17) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=*:*&_=1611373517539} hits=3 status=0 QTime=0
+2021-01-23 03:45:27.234 INFO  (qtp1282788025-21) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=*:*} hits=3 status=0 QTime=0
+2021-01-23 03:45:29.267 INFO  (qtp1282788025-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611373529101} status=0 QTime=0
+2021-01-23 03:45:29.330 INFO  (qtp1282788025-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611373529102} status=0 QTime=62
+2021-01-23 03:45:34.050 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q="web"+AND+"solr"+AND+"factorpad"&_=1611373529209} hits=1 status=0 QTime=1
+2021-01-23 03:45:36.577 INFO  (qtp1282788025-16) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q="web"+AND+"solr"+AND+"factorpad"} hits=1 status=0 QTime=2
+2021-01-23 03:45:49.067 INFO  (qtp1282788025-17) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q="web"AND"solr"AND"factorpad"&_=1611373529209} hits=1 status=0 QTime=1
+2021-01-23 03:45:51.984 INFO  (qtp1282788025-21) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q="web"AND"solr"AND"factorpad"} hits=1 status=0 QTime=1
+2021-01-23 03:50:46.501 INFO  (qtp1282788025-23) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q="web"AND"solr"NOT"factorpad"&_=1611373529209} hits=1 status=0 QTime=58
+2021-01-23 03:52:34.630 INFO  (ShutdownMonitor) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=24119573
+2021-01-23 03:52:34.630 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node, tag=null
+2021-01-23 03:52:34.631 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm, tag=null
+2021-01-23 03:52:34.631 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty, tag=null
+2021-01-23 03:52:34.633 INFO  (coreCloseExecutor-12-thread-1) [   x:maincore] o.a.s.c.SolrCore [maincore]  CLOSING SolrCore org.apache.solr.core.SolrCore@648b765
+2021-01-23 03:52:34.633 INFO  (coreCloseExecutor-12-thread-1) [   x:maincore] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.maincore, tag=105428837
