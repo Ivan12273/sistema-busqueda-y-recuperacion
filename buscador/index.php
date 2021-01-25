@@ -9,8 +9,10 @@
 
 </head>
 <body>
+
 <!-- partial:index.partial.html -->
 <form class="filter-wrapper" action="" method="POST">
+  <img class="image-logo" src="../images/logo.png" alt="Rooster">
   <div class="keyword-wrapper">
     <input type="text" id="keyword" name="keyword" autocomplete="off" placeholder="Buscar..." required />
     <i id="keyword-button" class="fa fa-search"></i>  
