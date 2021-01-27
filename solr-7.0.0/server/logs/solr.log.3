@@ -1,171 +1,69 @@
-2021-01-22 22:54:37.194 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.14.v20161028
-2021-01-22 22:54:37.775 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 7.0.0
-2021-01-22 22:54:37.775 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
-2021-01-22 22:54:37.775 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: C:\Users\ivana\OneDrive\Escritorio\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0, Default config dir: C:\Users\ivana\OneDrive\Escritorio\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr\configsets\_default\conf
-2021-01-22 22:54:37.786 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2021-01-22T22:54:37.776Z
-2021-01-22 22:54:37.787 INFO  (main) [   ] o.a.s.s.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
-2021-01-22 22:54:37.799 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: C:\Users\ivana\OneDrive\Escritorio\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr
-2021-01-22 22:54:37.806 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from C:\Users\ivana\OneDrive\Escritorio\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr\solr.xml
-2021-01-22 22:54:54.599 WARN  (main) [   ] o.a.s.h.a.SystemInfoHandler Resolving canonical hostname for local host took 16.254 seconds, possible DNS misconfiguration. Set the 'solr.dns.prevent.reverse.lookup' sysprop to true on startup to prevent future lookups if DNS can not be fixed.
-2021-01-22 22:54:54.655 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath C:\Users\ivana\OneDrive\Escritorio\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr
-2021-01-22 22:54:54.658 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [maincore]
-2021-01-22 22:54:54.714 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.c.SolrResourceLoader [maincore] Added 51 libs to classloader, from paths: [/C:/Users/ivana/OneDrive/Escritorio/ProyectoFinal/sistema-busqueda-y-recuperacion/solr-7.0.0/contrib/clustering/lib, /C:/Users/ivana/OneDrive/Escritorio/ProyectoFinal/sistema-busqueda-y-recuperacion/solr-7.0.0/contrib/extraction/lib, /C:/Users/ivana/OneDrive/Escritorio/ProyectoFinal/sistema-busqueda-y-recuperacion/solr-7.0.0/contrib/langid/lib, /C:/Users/ivana/OneDrive/Escritorio/ProyectoFinal/sistema-busqueda-y-recuperacion/solr-7.0.0/contrib/velocity/lib, /C:/Users/ivana/OneDrive/Escritorio/ProyectoFinal/sistema-busqueda-y-recuperacion/solr-7.0.0/dist]
-2021-01-22 22:54:54.875 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.0.0
-2021-01-22 22:54:55.014 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.s.IndexSchema [maincore] Schema name=default-config
-2021-01-22 22:54:55.145 INFO  (main) [   ] o.e.j.s.Server Started @18738ms
-2021-01-22 22:54:55.321 INFO  (qtp1282788025-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=63
-2021-01-22 22:54:55.464 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
-2021-01-22 22:54:55.529 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.c.CoreContainer Creating SolrCore 'maincore' using configuration from instancedir C:\Users\ivana\OneDrive\Escritorio\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr\maincore, trusted=true
-2021-01-22 22:54:55.553 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
-2021-01-22 22:54:55.558 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.c.SolrCore [[maincore] ] Opening new SolrCore at [C:\Users\ivana\OneDrive\Escritorio\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr\maincore], dataDir=[C:\Users\ivana\OneDrive\Escritorio\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr\maincore\data\]
-2021-01-22 22:54:55.593 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
-2021-01-22 22:55:12.050 WARN  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.h.a.SystemInfoHandler Resolving canonical hostname for local host took 16.272 seconds, possible DNS misconfiguration. Set the 'solr.dns.prevent.reverse.lookup' sysprop to true on startup to prevent future lookups if DNS can not be fixed.
-2021-01-22 22:55:12.094 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
-2021-01-22 22:55:12.094 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
-2021-01-22 22:55:12.106 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
-2021-01-22 22:55:12.106 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.u.CommitTracker Soft AutoCommit: disabled
-2021-01-22 22:55:12.200 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.s.SolrIndexSearcher Opening [Searcher@4378e403[maincore] main]
-2021-01-22 22:55:12.206 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\ivana\OneDrive\Escritorio\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr\maincore\conf
-2021-01-22 22:55:12.217 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
-2021-01-22 22:55:12.221 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
-2021-01-22 22:55:12.228 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.h.ReplicationHandler Commits will be reserved for  10000
-2021-01-22 22:55:12.258 INFO  (searcherExecutor-7-thread-1-processing-x:maincore) [   x:maincore] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@4378e403[maincore] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_1(7.0.0):C1) Uninverting(_2(7.0.0):C1)))}
-2021-01-22 22:55:12.258 INFO  (searcherExecutor-7-thread-1-processing-x:maincore) [   x:maincore] o.a.s.c.QuerySenderListener QuerySenderListener done.
-2021-01-22 22:55:12.258 INFO  (searcherExecutor-7-thread-1-processing-x:maincore) [   x:maincore] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
-2021-01-22 22:55:12.261 INFO  (searcherExecutor-7-thread-1-processing-x:maincore) [   x:maincore] o.a.s.c.SolrCore [maincore] Registered new searcher Searcher@4378e403[maincore] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_1(7.0.0):C1) Uninverting(_2(7.0.0):C1)))}
-2021-01-22 22:55:43.462 INFO  (ShutdownMonitor) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=24119573
-2021-01-22 22:55:43.463 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node, tag=null
-2021-01-22 22:55:43.463 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm, tag=null
-2021-01-22 22:55:43.463 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty, tag=null
-2021-01-22 22:55:43.463 INFO  (ShutdownMonitor) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
-2021-01-22 22:55:43.464 INFO  (coreCloseExecutor-12-thread-1) [   x:maincore] o.a.s.c.SolrCore [maincore]  CLOSING SolrCore org.apache.solr.core.SolrCore@63cee9d5
-2021-01-22 22:55:43.464 INFO  (coreCloseExecutor-12-thread-1) [   x:maincore] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.maincore, tag=1674504661
-2021-01-22 22:57:27.750 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.14.v20161028
-2021-01-22 22:57:28.243 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 7.0.0
-2021-01-22 22:57:28.243 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
-2021-01-22 22:57:28.243 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: C:/Users/ivana/OneDrive/Escritorio/ProyectoFinal/sistema-busqueda-y-recuperacion/solr-7.0.0, Default config dir: C:/Users/ivana/OneDrive/Escritorio/ProyectoFinal/sistema-busqueda-y-recuperacion/solr-7.0.0/server/solr/configsets/_default/conf
-2021-01-22 22:57:28.255 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2021-01-22T22:57:28.244Z
-2021-01-22 22:57:28.256 INFO  (main) [   ] o.a.s.s.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
-2021-01-22 22:57:28.269 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: C:/Users/ivana/OneDrive/Escritorio/ProyectoFinal/sistema-busqueda-y-recuperacion/solr-7.0.0/server/solr
-2021-01-22 22:57:28.274 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from C:\Users\ivana\OneDrive\Escritorio\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr\solr.xml
-2021-01-22 22:57:45.063 WARN  (main) [   ] o.a.s.h.a.SystemInfoHandler Resolving canonical hostname for local host took 16.260 seconds, possible DNS misconfiguration. Set the 'solr.dns.prevent.reverse.lookup' sysprop to true on startup to prevent future lookups if DNS can not be fixed.
-2021-01-22 22:57:45.142 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath C:\Users\ivana\OneDrive\Escritorio\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr
-2021-01-22 22:57:45.146 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [maincore]
-2021-01-22 22:57:45.194 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.c.SolrResourceLoader [maincore] Added 51 libs to classloader, from paths: [/C:/Users/ivana/OneDrive/Escritorio/ProyectoFinal/sistema-busqueda-y-recuperacion/solr-7.0.0/contrib/clustering/lib, /C:/Users/ivana/OneDrive/Escritorio/ProyectoFinal/sistema-busqueda-y-recuperacion/solr-7.0.0/contrib/extraction/lib, /C:/Users/ivana/OneDrive/Escritorio/ProyectoFinal/sistema-busqueda-y-recuperacion/solr-7.0.0/contrib/langid/lib, /C:/Users/ivana/OneDrive/Escritorio/ProyectoFinal/sistema-busqueda-y-recuperacion/solr-7.0.0/contrib/velocity/lib, /C:/Users/ivana/OneDrive/Escritorio/ProyectoFinal/sistema-busqueda-y-recuperacion/solr-7.0.0/dist]
-2021-01-22 22:57:45.367 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.0.0
-2021-01-22 22:57:45.524 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.s.IndexSchema [maincore] Schema name=default-config
-2021-01-22 22:57:45.661 INFO  (main) [   ] o.e.j.s.Server Started @18538ms
-2021-01-22 22:57:45.993 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
-2021-01-22 22:57:46.064 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.c.CoreContainer Creating SolrCore 'maincore' using configuration from instancedir C:\Users\ivana\OneDrive\Escritorio\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr\maincore, trusted=true
-2021-01-22 22:57:46.096 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
-2021-01-22 22:57:46.102 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.c.SolrCore [[maincore] ] Opening new SolrCore at [C:\Users\ivana\OneDrive\Escritorio\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr\maincore], dataDir=[C:\Users\ivana\OneDrive\Escritorio\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr\maincore\data\]
-2021-01-22 22:57:46.143 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
-2021-01-22 22:58:02.592 WARN  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.h.a.SystemInfoHandler Resolving canonical hostname for local host took 16.231 seconds, possible DNS misconfiguration. Set the 'solr.dns.prevent.reverse.lookup' sysprop to true on startup to prevent future lookups if DNS can not be fixed.
-2021-01-22 22:58:02.639 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
-2021-01-22 22:58:02.639 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
-2021-01-22 22:58:02.653 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
-2021-01-22 22:58:02.653 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.u.CommitTracker Soft AutoCommit: disabled
-2021-01-22 22:58:02.746 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.s.SolrIndexSearcher Opening [Searcher@3a32f380[maincore] main]
-2021-01-22 22:58:02.754 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\ivana\OneDrive\Escritorio\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr\maincore\conf
-2021-01-22 22:58:02.766 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
-2021-01-22 22:58:02.771 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
-2021-01-22 22:58:02.777 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.h.ReplicationHandler Commits will be reserved for  10000
-2021-01-22 22:58:02.809 INFO  (searcherExecutor-7-thread-1-processing-x:maincore) [   x:maincore] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@3a32f380[maincore] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_1(7.0.0):C1) Uninverting(_2(7.0.0):C1)))}
-2021-01-22 22:58:02.809 INFO  (searcherExecutor-7-thread-1-processing-x:maincore) [   x:maincore] o.a.s.c.QuerySenderListener QuerySenderListener done.
-2021-01-22 22:58:02.809 INFO  (searcherExecutor-7-thread-1-processing-x:maincore) [   x:maincore] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
-2021-01-22 22:58:02.813 INFO  (searcherExecutor-7-thread-1-processing-x:maincore) [   x:maincore] o.a.s.c.SolrCore [maincore] Registered new searcher Searcher@3a32f380[maincore] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_1(7.0.0):C1) Uninverting(_2(7.0.0):C1)))}
-2021-01-22 22:58:51.704 INFO  (qtp1282788025-20) [   x:maincore] o.a.s.c.PluginBag Going to create a new requestHandler with {type = requestHandler,name = /update/extract,class = solr.extraction.ExtractingRequestHandler,attributes = {startup=lazy, name=/update/extract, class=solr.extraction.ExtractingRequestHandler},args = {defaults={lowernames=true,fmap.meta=ignored_,fmap.content=_text_,df=_text_}}} 
-2021-01-22 22:58:52.425 INFO  (qtp1282788025-20) [   x:maincore] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at C:\Users\ivana\OneDrive\Escritorio\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr\maincore\conf\managed-schema
-2021-01-22 22:58:52.477 INFO  (qtp1282788025-20) [   x:maincore] o.a.s.u.p.LogUpdateProcessorFactory [maincore]  webapp=/solr path=/update/extract params={literal.id=https://www.matematicas.uady.mx&literal.url=https://www.matematicas.uady.mx}{add=[https://www.matematicas.uady.mx (1689629577641459712)]} 0 772
-2021-01-22 22:58:53.488 INFO  (qtp1282788025-18) [   x:maincore] o.a.s.u.DirectUpdateHandler2 start commit{_version_=1689629578742464512,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
-2021-01-22 22:58:53.488 INFO  (qtp1282788025-18) [   x:maincore] o.a.s.u.SolrIndexWriter Calling setCommitData with IW:org.apache.solr.update.SolrIndexWriter@38c8f25 commitCommandVersion:1689629578742464512
-2021-01-22 22:58:53.595 INFO  (qtp1282788025-18) [   x:maincore] o.a.s.s.SolrIndexSearcher Opening [Searcher@51a5ee2e[maincore] main]
-2021-01-22 22:58:53.598 INFO  (qtp1282788025-18) [   x:maincore] o.a.s.u.DirectUpdateHandler2 end_commit_flush
-2021-01-22 22:58:53.598 INFO  (searcherExecutor-7-thread-1-processing-x:maincore) [   x:maincore] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@51a5ee2e[maincore] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_1(7.0.0):C1) Uninverting(_2(7.0.0):C1) Uninverting(_3(7.0.0):C1)))}
-2021-01-22 22:58:53.598 INFO  (searcherExecutor-7-thread-1-processing-x:maincore) [   x:maincore] o.a.s.c.QuerySenderListener QuerySenderListener done.
-2021-01-22 22:58:53.598 INFO  (searcherExecutor-7-thread-1-processing-x:maincore) [   x:maincore] o.a.s.c.SolrCore [maincore] Registered new searcher Searcher@51a5ee2e[maincore] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_1(7.0.0):C1) Uninverting(_2(7.0.0):C1) Uninverting(_3(7.0.0):C1)))}
-2021-01-22 22:58:53.599 INFO  (qtp1282788025-18) [   x:maincore] o.a.s.u.p.LogUpdateProcessorFactory [maincore]  webapp=/solr path=/update/extract params={commit=true}{commit=} 0 111
-2021-01-22 22:59:03.918 INFO  (qtp1282788025-21) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
-2021-01-22 22:59:04.187 INFO  (qtp1282788025-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611356344078} status=0 QTime=2
-2021-01-22 22:59:04.232 INFO  (qtp1282788025-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611356344079} status=0 QTime=46
-2021-01-22 22:59:04.272 INFO  (qtp1282788025-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611356344079} status=0 QTime=33
-2021-01-22 22:59:06.077 INFO  (qtp1282788025-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611356344078} status=0 QTime=0
-2021-01-22 22:59:06.085 INFO  (qtp1282788025-19) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1611356346069} status=0 QTime=6
-2021-01-22 22:59:06.086 INFO  (qtp1282788025-23) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/replication params={wt=json&command=details&_=1611356346069} status=0 QTime=5
-2021-01-22 22:59:06.086 INFO  (qtp1282788025-18) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1611356344079&ts=1611356344079} status=503 QTime=2
-2021-01-22 22:59:06.155 INFO  (qtp1282788025-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611356344079} status=0 QTime=79
-2021-01-22 22:59:06.157 INFO  (qtp1282788025-21) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/admin/system params={wt=json&_=1611356346069} status=0 QTime=73
-2021-01-22 22:59:08.396 INFO  (qtp1282788025-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611356344078} status=0 QTime=0
-2021-01-22 22:59:08.434 INFO  (qtp1282788025-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611356344079} status=0 QTime=36
-2021-01-22 22:59:15.167 INFO  (qtp1282788025-19) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=matematicas&_=1611356348374} hits=1 status=0 QTime=26
-2021-01-23 03:13:26.013 INFO  (qtp1282788025-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611371605870} status=0 QTime=2
-2021-01-23 03:13:26.071 INFO  (qtp1282788025-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611371605871} status=0 QTime=62
-2021-01-23 03:13:29.504 INFO  (qtp1282788025-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611371609308} status=0 QTime=0
-2021-01-23 03:13:29.559 INFO  (qtp1282788025-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611371609308} status=0 QTime=53
-2021-01-23 03:16:57.460 INFO  (qtp1282788025-19) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website&_=1611371609465} hits=2 status=0 QTime=1
-2021-01-23 03:18:51.926 INFO  (qtp1282788025-21) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={_=1611371609465} hits=0 status=0 QTime=46
-2021-01-23 03:19:43.557 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website&wt=php&_=1611371609465} hits=2 status=0 QTime=46
-2021-01-23 03:19:56.257 INFO  (qtp1282788025-21) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website&wt=json&_=1611371609465} hits=2 status=0 QTime=1
-2021-01-23 03:20:02.684 INFO  (qtp1282788025-19) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website&_=1611371609465} hits=2 status=0 QTime=0
-2021-01-23 03:20:03.956 INFO  (qtp1282788025-20) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website&_=1611371609465} hits=2 status=0 QTime=0
-2021-01-23 03:22:02.787 INFO  (qtp1282788025-16) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website+matematicas&_=1611371609465} hits=3 status=0 QTime=14
-2021-01-23 03:22:16.060 INFO  (qtp1282788025-20) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website+or+matematicas&_=1611371609465} hits=3 status=0 QTime=57
-2021-01-23 03:22:25.254 INFO  (qtp1282788025-17) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website+and+matematicas&_=1611371609465} hits=3 status=0 QTime=3
-2021-01-23 03:25:06.274 INFO  (qtp1282788025-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611371609308} status=0 QTime=0
-2021-01-23 03:25:06.293 INFO  (qtp1282788025-19) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1611372306239} status=0 QTime=13
-2021-01-23 03:25:06.378 INFO  (qtp1282788025-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611371609308} status=0 QTime=98
-2021-01-23 03:25:08.936 INFO  (qtp1282788025-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611371609308} status=0 QTime=0
-2021-01-23 03:25:09.003 INFO  (qtp1282788025-37) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611371609308} status=0 QTime=67
-2021-01-23 03:29:26.142 INFO  (qtp1282788025-17) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=websites%26matematicas&_=1611371609465} hits=1 status=0 QTime=2
-2021-01-23 03:29:33.627 INFO  (qtp1282788025-37) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=websites||matematicas&_=1611371609465} hits=1 status=0 QTime=1
-2021-01-23 03:29:54.494 INFO  (qtp1282788025-23) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={fq=websites&fq=matematicas&_=1611371609465} hits=0 status=0 QTime=61
-2021-01-23 03:30:04.842 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={fq=websites&_=1611371609465} hits=0 status=0 QTime=1
-2021-01-23 03:30:15.295 INFO  (qtp1282788025-22) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={fq=websites&fq=matematicas&_=1611371609465} hits=0 status=0 QTime=0
-2021-01-23 03:30:20.081 INFO  (qtp1282788025-21) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=matematicas&fq=websites&fq=matematicas&_=1611371609465} hits=0 status=0 QTime=86
-2021-01-23 03:30:26.428 INFO  (qtp1282788025-17) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=matematicas&fq=websites&_=1611371609465} hits=0 status=0 QTime=2
-2021-01-23 03:30:31.804 INFO  (qtp1282788025-37) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=matematicas&fq=matematicas&_=1611371609465} hits=1 status=0 QTime=2
-2021-01-23 03:30:46.764 INFO  (qtp1282788025-23) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=matematicas&fq=Joomla&_=1611371609465} hits=1 status=0 QTime=2
-2021-01-23 03:30:49.370 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=matematicas&fq=Joomla&_=1611371609465} hits=1 status=0 QTime=1
-2021-01-23 03:30:54.971 INFO  (qtp1282788025-22) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=web&fq=Joomla&_=1611371609465} hits=1 status=0 QTime=1
-2021-01-23 03:30:59.787 INFO  (qtp1282788025-21) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=web&_=1611371609465} hits=3 status=0 QTime=1
-2021-01-23 03:31:37.983 INFO  (qtp1282788025-17) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=apache&_=1611371609465} hits=2 status=0 QTime=0
-2021-01-23 03:31:49.328 INFO  (qtp1282788025-37) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=apache&fq=lucene&_=1611371609465} hits=2 status=0 QTime=1
-2021-01-23 03:32:05.422 INFO  (qtp1282788025-23) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=apache&fq=factorpad&_=1611371609465} hits=1 status=0 QTime=47
-2021-01-23 03:32:13.630 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=apache&_=1611371609465} hits=2 status=0 QTime=0
-2021-01-23 03:32:45.736 INFO  (qtp1282788025-22) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=apache&fq=tika&_=1611371609465} hits=1 status=0 QTime=1
-2021-01-23 03:33:03.246 INFO  (qtp1282788025-21) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=matematicas&_=1611371609465} hits=1 status=0 QTime=0
-2021-01-23 03:33:17.878 INFO  (qtp1282788025-17) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website&_=1611371609465} hits=2 status=0 QTime=0
-2021-01-23 03:33:26.910 INFO  (qtp1282788025-37) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=web&_=1611371609465} hits=3 status=0 QTime=0
-2021-01-23 03:33:34.759 INFO  (qtp1282788025-23) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=web&fq=matematicas&_=1611371609465} hits=1 status=0 QTime=1
-2021-01-23 03:33:40.670 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=web&_=1611371609465} hits=3 status=0 QTime=0
-2021-01-23 03:33:46.007 INFO  (qtp1282788025-22) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=web&fq=solr&_=1611371609465} hits=2 status=0 QTime=1
-2021-01-23 03:33:53.624 INFO  (qtp1282788025-21) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=web&fq=solr&fq=factorpad&_=1611371609465} hits=1 status=0 QTime=1
-2021-01-23 03:36:39.690 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=web&fq=factorpad&fq=solr} hits=1 status=0 QTime=1
-2021-01-23 03:36:48.731 INFO  (qtp1282788025-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611373008320} status=0 QTime=1
-2021-01-23 03:36:48.852 INFO  (qtp1282788025-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611373008321} status=0 QTime=117
-2021-01-23 03:36:52.081 INFO  (qtp1282788025-37) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=*:*&_=1611373008582} hits=3 status=0 QTime=1
-2021-01-23 03:36:59.627 INFO  (qtp1282788025-16) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=web&fq=factorpad&fq=solr} hits=1 status=0 QTime=1
-2021-01-23 03:38:01.963 INFO  (qtp1282788025-19) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=web&fq=solr&fq=factorpad&_=1611373008582} hits=1 status=0 QTime=1
-2021-01-23 03:40:47.232 INFO  (qtp1282788025-16) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=web+solr+factorpad&_=1611373008582} hits=3 status=0 QTime=3
-2021-01-23 03:44:33.980 INFO  (qtp1282788025-20) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q="web"+AND+"solr"&_=1611373008582} hits=2 status=0 QTime=2
-2021-01-23 03:44:34.833 INFO  (qtp1282788025-16) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q="web"+AND+"solr"&_=1611373008582} hits=2 status=0 QTime=1
-2021-01-23 03:45:02.620 INFO  (qtp1282788025-17) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q="web"+AND+"solr"+AND+"factorpad"&_=1611373008582} hits=1 status=0 QTime=2
-2021-01-23 03:45:14.158 INFO  (qtp1282788025-22) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q="web"+AND+"solr"+AND+"factorpad"} hits=1 status=0 QTime=1
-2021-01-23 03:45:17.656 INFO  (qtp1282788025-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611373517396} status=0 QTime=0
-2021-01-23 03:45:17.742 INFO  (qtp1282788025-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611373517397} status=0 QTime=85
-2021-01-23 03:45:19.867 INFO  (qtp1282788025-16) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=*:*&_=1611373517539} hits=3 status=0 QTime=0
-2021-01-23 03:45:25.721 INFO  (qtp1282788025-17) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=*:*&_=1611373517539} hits=3 status=0 QTime=0
-2021-01-23 03:45:27.234 INFO  (qtp1282788025-21) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=*:*} hits=3 status=0 QTime=0
-2021-01-23 03:45:29.267 INFO  (qtp1282788025-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611373529101} status=0 QTime=0
-2021-01-23 03:45:29.330 INFO  (qtp1282788025-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611373529102} status=0 QTime=62
-2021-01-23 03:45:34.050 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q="web"+AND+"solr"+AND+"factorpad"&_=1611373529209} hits=1 status=0 QTime=1
-2021-01-23 03:45:36.577 INFO  (qtp1282788025-16) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q="web"+AND+"solr"+AND+"factorpad"} hits=1 status=0 QTime=2
-2021-01-23 03:45:49.067 INFO  (qtp1282788025-17) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q="web"AND"solr"AND"factorpad"&_=1611373529209} hits=1 status=0 QTime=1
-2021-01-23 03:45:51.984 INFO  (qtp1282788025-21) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q="web"AND"solr"AND"factorpad"} hits=1 status=0 QTime=1
-2021-01-23 03:50:46.501 INFO  (qtp1282788025-23) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q="web"AND"solr"NOT"factorpad"&_=1611373529209} hits=1 status=0 QTime=58
-2021-01-23 03:52:34.630 INFO  (ShutdownMonitor) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=24119573
-2021-01-23 03:52:34.630 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node, tag=null
-2021-01-23 03:52:34.631 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm, tag=null
-2021-01-23 03:52:34.631 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty, tag=null
-2021-01-23 03:52:34.633 INFO  (coreCloseExecutor-12-thread-1) [   x:maincore] o.a.s.c.SolrCore [maincore]  CLOSING SolrCore org.apache.solr.core.SolrCore@648b765
-2021-01-23 03:52:34.633 INFO  (coreCloseExecutor-12-thread-1) [   x:maincore] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.maincore, tag=105428837
+2021-01-25 01:13:04.509 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.14.v20161028
+2021-01-25 01:13:05.034 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 7.0.0
+2021-01-25 01:13:05.035 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2021-01-25 01:13:05.035 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: C:\xampp\htdocs\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0, Default config dir: C:\xampp\htdocs\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr\configsets\_default\conf
+2021-01-25 01:13:05.060 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2021-01-25T01:13:05.036Z
+2021-01-25 01:13:05.061 INFO  (main) [   ] o.a.s.s.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+2021-01-25 01:13:05.089 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: C:\xampp\htdocs\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr
+2021-01-25 01:13:05.095 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from C:\xampp\htdocs\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr\solr.xml
+2021-01-25 01:13:05.887 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath C:\xampp\htdocs\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr
+2021-01-25 01:13:05.890 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [maincore]
+2021-01-25 01:13:05.947 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.c.SolrResourceLoader [maincore] Added 51 libs to classloader, from paths: [/C:/xampp/htdocs/ProyectoFinal/sistema-busqueda-y-recuperacion/solr-7.0.0/contrib/clustering/lib, /C:/xampp/htdocs/ProyectoFinal/sistema-busqueda-y-recuperacion/solr-7.0.0/contrib/extraction/lib, /C:/xampp/htdocs/ProyectoFinal/sistema-busqueda-y-recuperacion/solr-7.0.0/contrib/langid/lib, /C:/xampp/htdocs/ProyectoFinal/sistema-busqueda-y-recuperacion/solr-7.0.0/contrib/velocity/lib, /C:/xampp/htdocs/ProyectoFinal/sistema-busqueda-y-recuperacion/solr-7.0.0/dist]
+2021-01-25 01:13:06.282 INFO  (main) [   ] o.e.j.s.Server Started @3383ms
+2021-01-25 01:13:06.473 INFO  (qtp1282788025-18) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
+2021-01-25 01:13:06.475 INFO  (qtp1282788025-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611532151846} status=0 QTime=23
+2021-01-25 01:13:06.520 INFO  (qtp1282788025-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611532151849} status=0 QTime=68
+2021-01-25 01:13:06.546 INFO  (qtp1282788025-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=49
+2021-01-25 01:13:06.957 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.0.0
+2021-01-25 01:13:07.096 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.s.IndexSchema [maincore] Schema name=default-config
+2021-01-25 01:13:07.621 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2021-01-25 01:13:07.646 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.c.CoreContainer Creating SolrCore 'maincore' using configuration from instancedir C:\xampp\htdocs\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr\maincore, trusted=true
+2021-01-25 01:13:07.682 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
+2021-01-25 01:13:07.694 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.c.SolrCore [[maincore] ] Opening new SolrCore at [C:\xampp\htdocs\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr\maincore], dataDir=[C:\xampp\htdocs\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr\maincore\data\]
+2021-01-25 01:13:07.746 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2021-01-25 01:13:08.006 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2021-01-25 01:13:08.006 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2021-01-25 01:13:08.049 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2021-01-25 01:13:08.049 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2021-01-25 01:13:08.358 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.s.SolrIndexSearcher Opening [Searcher@56ccfe18[maincore] main]
+2021-01-25 01:13:08.367 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\xampp\htdocs\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr\maincore\conf
+2021-01-25 01:13:08.381 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2021-01-25 01:13:08.385 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2021-01-25 01:13:08.392 INFO  (coreLoadExecutor-6-thread-1) [   x:maincore] o.a.s.h.ReplicationHandler Commits will be reserved for  10000
+2021-01-25 01:13:08.434 INFO  (searcherExecutor-7-thread-1-processing-x:maincore) [   x:maincore] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@56ccfe18[maincore] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_1(7.0.0):C1) Uninverting(_2(7.0.0):C1) Uninverting(_3(7.0.0):C1)))}
+2021-01-25 01:13:08.434 INFO  (searcherExecutor-7-thread-1-processing-x:maincore) [   x:maincore] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-01-25 01:13:08.434 INFO  (searcherExecutor-7-thread-1-processing-x:maincore) [   x:maincore] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2021-01-25 01:13:08.438 INFO  (searcherExecutor-7-thread-1-processing-x:maincore) [   x:maincore] o.a.s.c.SolrCore [maincore] Registered new searcher Searcher@56ccfe18[maincore] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_1(7.0.0):C1) Uninverting(_2(7.0.0):C1) Uninverting(_3(7.0.0):C1)))}
+2021-01-25 01:14:36.269 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website} hits=2 status=0 QTime=56
+2021-01-25 01:15:00.097 INFO  (qtp1282788025-18) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website} hits=2 status=0 QTime=1
+2021-01-25 01:20:50.586 INFO  (qtp1282788025-18) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website} hits=2 status=0 QTime=0
+2021-01-25 01:21:20.735 INFO  (qtp1282788025-22) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website} hits=2 status=0 QTime=1
+2021-01-25 01:24:21.807 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website} hits=2 status=0 QTime=0
+2021-01-25 01:27:28.517 INFO  (qtp1282788025-15) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website} hits=2 status=0 QTime=2
+2021-01-25 01:27:57.561 INFO  (qtp1282788025-18) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website} hits=2 status=0 QTime=0
+2021-01-25 01:45:54.767 INFO  (qtp1282788025-16) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website} hits=2 status=0 QTime=2
+2021-01-25 01:46:14.180 INFO  (qtp1282788025-23) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website} hits=2 status=0 QTime=1
+2021-01-25 01:46:32.912 INFO  (qtp1282788025-18) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website} hits=2 status=0 QTime=0
+2021-01-25 01:47:08.299 INFO  (qtp1282788025-16) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website} hits=2 status=0 QTime=1
+2021-01-25 01:47:30.134 INFO  (qtp1282788025-15) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website} hits=2 status=0 QTime=0
+2021-01-25 01:48:17.621 INFO  (qtp1282788025-18) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website} hits=2 status=0 QTime=0
+2021-01-25 01:49:29.920 INFO  (qtp1282788025-16) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website} hits=2 status=0 QTime=1
+2021-01-25 01:49:58.712 INFO  (qtp1282788025-22) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website} hits=2 status=0 QTime=0
+2021-01-25 01:51:40.515 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website} hits=2 status=0 QTime=0
+2021-01-25 01:52:30.901 INFO  (qtp1282788025-18) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website} hits=2 status=0 QTime=0
+2021-01-25 01:52:50.805 INFO  (qtp1282788025-16) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website} hits=2 status=0 QTime=0
+2021-01-25 01:53:11.860 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website} hits=2 status=0 QTime=0
+2021-01-25 01:54:30.878 INFO  (qtp1282788025-19) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website} hits=2 status=0 QTime=0
+2021-01-25 01:55:24.343 INFO  (qtp1282788025-23) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website} hits=2 status=0 QTime=0
+2021-01-25 02:03:16.707 INFO  (qtp1282788025-22) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website} hits=2 status=0 QTime=2
+2021-01-25 02:03:47.622 INFO  (qtp1282788025-15) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website} hits=2 status=0 QTime=3
+2021-01-25 02:04:23.965 INFO  (qtp1282788025-19) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=website} hits=2 status=0 QTime=0
+2021-01-25 02:04:29.362 INFO  (qtp1282788025-18) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=hola} hits=0 status=0 QTime=12
+2021-01-25 02:04:32.231 INFO  (qtp1282788025-15) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=f} hits=1 status=0 QTime=1
+2021-01-25 02:04:38.796 INFO  (qtp1282788025-23) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/select params={q=matematicas} hits=1 status=0 QTime=2
+2021-01-25 02:05:12.977 INFO  (ShutdownMonitor) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=24119573
+2021-01-25 02:05:12.977 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node, tag=null
+2021-01-25 02:05:12.977 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm, tag=null
+2021-01-25 02:05:12.977 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty, tag=null
+2021-01-25 02:05:12.978 INFO  (coreCloseExecutor-12-thread-1) [   x:maincore] o.a.s.c.SolrCore [maincore]  CLOSING SolrCore org.apache.solr.core.SolrCore@2bac05e2
+2021-01-25 02:05:12.978 INFO  (coreCloseExecutor-12-thread-1) [   x:maincore] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.maincore, tag=732693986
