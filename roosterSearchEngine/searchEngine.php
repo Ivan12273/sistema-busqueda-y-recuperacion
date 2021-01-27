@@ -17,11 +17,13 @@ function search($keyword)
 
     //Contruir query expandida
     $query = makeExpandedQuery($newWords);
-    // $query = "http://localhost:8983/solr/maincore/select?q=google!search";
+    // $query = "http://localhost:8983/solr/maincore/select?q=nino";
     // $query = "http://localhost:8983/solr/maincore/select?q=google!valley!adsense!adwords!yahoo!bin";
 
+    // echo ("QUERY: " .  $query);
+
     //Hacer petición
-    // $ch = curl_init("http://localhost:8983/solr/maincore/select?q=" . $keyword);
+    $ch = curl_init("http://localhost:8983/solr/maincore/select?q=" . $keyword);
     $ch = curl_init("" . $query);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
@@ -37,7 +39,7 @@ function search($keyword)
     $responseArray = json_decode($response, true);
     // echo ("<br>" . $response);
 
-    // Sin resultados
+    //Sin resultados
     if ($responseArray["response"]["numFound"] == 0) {
         echo ("No se encontro ningun documento que coincida con su busqueda.");
     }
@@ -53,7 +55,13 @@ function search($keyword)
 // Devuelve un arreglo con 10 palabras nuevas para la expansión
 function makeSemanticExpansion($keyword)
 {
-    $dm = curl_init("https://api.datamuse.com/words?ml=" . $keyword);
+
+    // Expansión en español
+    // $query = "https://api.datamuse.com/words?ml=" . $keyword . "&v=es";
+    //Expansión en ingles
+    $query = "https://api.datamuse.com/words?ml=" . $keyword;
+
+    $dm = curl_init($query);
     curl_setopt($dm, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($dm, CURLOPT_CUSTOMREQUEST, "GET");
     $response2 = curl_exec($dm);
@@ -92,6 +100,7 @@ function makeExpandedQuery($newWords)
     $buildQuery = substr($buildQuery, 0, -1);
 
     $query = $baseUrl . $buildQuery;
+    // echo ("QUERY: " .  $query);
 
     return $query;
 }
