@@ -424,15 +424,27 @@
   <field name="content_type_hint" type="text_general"/>
   <field name="dc_title" type="text_general"/>
   <field name="description" type="text_general"/>
+  <field name="fb_app_id" type="plongs"/>
+  <field name="format_detection" type="text_general"/>
   <field name="generator" type="text_general"/>
   <field name="id" type="string" multiValued="false" indexed="true" required="true" stored="true"/>
   <field name="keywords" type="text_general"/>
+  <field name="oath_guce_consent_host" type="text_general"/>
+  <field name="og_description" type="text_general"/>
+  <field name="og_image" type="text_general"/>
+  <field name="og_site_name" type="text_general"/>
+  <field name="og_title" type="text_general"/>
+  <field name="og_type" type="text_general"/>
+  <field name="og_url" type="text_general"/>
+  <field name="referrer" type="text_general"/>
   <field name="revised" type="pdates"/>
   <field name="stream_content_type" type="text_general"/>
   <field name="stream_size" type="text_general"/>
+  <field name="theme_color" type="text_general"/>
   <field name="title" type="text_general"/>
   <field name="url" type="text_general"/>
   <field name="viewport" type="text_general"/>
+  <field name="x_dns_prefetch_control" type="text_general"/>
   <field name="x_parsed_by" type="text_general"/>
   <field name="x_ua_compatible" type="text_general"/>
   <dynamicField name="*_txt_en_split_tight" type="text_en_splitting_tight" indexed="true" stored="true"/>
@@ -513,4 +525,15 @@
   <copyField source="content_location" dest="content_location_str" maxChars="256"/>
   <copyField source="generator" dest="generator_str" maxChars="256"/>
   <copyField source="content_type_hint" dest="content_type_hint_str" maxChars="256"/>
+  <copyField source="referrer" dest="referrer_str" maxChars="256"/>
+  <copyField source="theme_color" dest="theme_color_str" maxChars="256"/>
+  <copyField source="og_site_name" dest="og_site_name_str" maxChars="256"/>
+  <copyField source="og_title" dest="og_title_str" maxChars="256"/>
+  <copyField source="format_detection" dest="format_detection_str" maxChars="256"/>
+  <copyField source="og_description" dest="og_description_str" maxChars="256"/>
+  <copyField source="og_type" dest="og_type_str" maxChars="256"/>
+  <copyField source="og_url" dest="og_url_str" maxChars="256"/>
+  <copyField source="oath_guce_consent_host" dest="oath_guce_consent_host_str" maxChars="256"/>
+  <copyField source="x_dns_prefetch_control" dest="x_dns_prefetch_control_str" maxChars="256"/>
+  <copyField source="og_image" dest="og_image_str" maxChars="256"/>
 </schema>
