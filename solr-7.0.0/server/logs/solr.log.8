@@ -1,0 +1,66 @@
+2021-01-22 20:22:38.751 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.14.v20161028
+2021-01-22 20:22:40.110 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 7.0.0
+2021-01-22 20:22:40.111 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2021-01-22 20:22:40.111 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: C:\Users\ivana\OneDrive\Escritorio\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0, Default config dir: C:\Users\ivana\OneDrive\Escritorio\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr\configsets\_default\conf
+2021-01-22 20:22:40.178 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2021-01-22T20:22:40.158Z
+2021-01-22 20:22:40.179 INFO  (main) [   ] o.a.s.s.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+2021-01-22 20:22:40.205 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: C:\Users\ivana\OneDrive\Escritorio\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr
+2021-01-22 20:22:40.216 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from C:\Users\ivana\OneDrive\Escritorio\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr\solr.xml
+2021-01-22 20:22:57.531 WARN  (main) [   ] o.a.s.h.a.SystemInfoHandler Resolving canonical hostname for local host took 15.959 seconds, possible DNS misconfiguration. Set the 'solr.dns.prevent.reverse.lookup' sysprop to true on startup to prevent future lookups if DNS can not be fixed.
+2021-01-22 20:22:57.722 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 0 core definitions underneath C:\Users\ivana\OneDrive\Escritorio\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr
+2021-01-22 20:22:58.207 INFO  (main) [   ] o.e.j.s.Server Started @21014ms
+2021-01-22 20:22:58.451 INFO  (qtp1282788025-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=128
+2021-01-22 20:23:09.880 INFO  (qtp1282788025-23) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
+2021-01-22 20:23:10.476 INFO  (qtp1282788025-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611346990184} status=0 QTime=3
+2021-01-22 20:23:10.554 INFO  (qtp1282788025-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611346990186} status=0 QTime=80
+2021-01-22 20:23:10.642 INFO  (qtp1282788025-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611346990186} status=0 QTime=68
+2021-01-22 20:25:27.403 INFO  (qtp1282788025-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=42
+2021-01-22 20:25:27.430 INFO  (qtp1282788025-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={core=maincore&action=STATUS&wt=json} status=0 QTime=0
+2021-01-22 20:25:27.690 INFO  (qtp1282788025-14) [   ] o.a.s.h.a.CoreAdminOperation core create command name=maincore&action=CREATE&instanceDir=maincore&wt=json
+2021-01-22 20:25:27.854 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.c.SolrResourceLoader [maincore] Added 51 libs to classloader, from paths: [/C:/Users/ivana/OneDrive/Escritorio/ProyectoFinal/sistema-busqueda-y-recuperacion/solr-7.0.0/contrib/clustering/lib, /C:/Users/ivana/OneDrive/Escritorio/ProyectoFinal/sistema-busqueda-y-recuperacion/solr-7.0.0/contrib/extraction/lib, /C:/Users/ivana/OneDrive/Escritorio/ProyectoFinal/sistema-busqueda-y-recuperacion/solr-7.0.0/contrib/langid/lib, /C:/Users/ivana/OneDrive/Escritorio/ProyectoFinal/sistema-busqueda-y-recuperacion/solr-7.0.0/contrib/velocity/lib, /C:/Users/ivana/OneDrive/Escritorio/ProyectoFinal/sistema-busqueda-y-recuperacion/solr-7.0.0/dist]
+2021-01-22 20:25:28.248 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.0.0
+2021-01-22 20:25:28.435 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.s.IndexSchema [maincore] Schema name=default-config
+2021-01-22 20:25:29.228 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2021-01-22 20:25:29.389 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.c.CoreContainer Creating SolrCore 'maincore' using configuration from instancedir C:\Users\ivana\OneDrive\Escritorio\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr\maincore, trusted=true
+2021-01-22 20:25:29.426 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
+2021-01-22 20:25:29.436 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.c.SolrCore [[maincore] ] Opening new SolrCore at [C:\Users\ivana\OneDrive\Escritorio\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr\maincore], dataDir=[C:\Users\ivana\OneDrive\Escritorio\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr\maincore\data\]
+2021-01-22 20:25:29.635 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2021-01-22 20:25:46.012 WARN  (qtp1282788025-14) [   x:maincore] o.a.s.h.a.SystemInfoHandler Resolving canonical hostname for local host took 15.941 seconds, possible DNS misconfiguration. Set the 'solr.dns.prevent.reverse.lookup' sysprop to true on startup to prevent future lookups if DNS can not be fixed.
+2021-01-22 20:25:46.139 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2021-01-22 20:25:46.139 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2021-01-22 20:25:46.149 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2021-01-22 20:25:46.149 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2021-01-22 20:25:46.182 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.s.SolrIndexSearcher Opening [Searcher@4b60f2e3[maincore] main]
+2021-01-22 20:25:46.201 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\ivana\OneDrive\Escritorio\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr\maincore\conf
+2021-01-22 20:25:46.237 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2021-01-22 20:25:46.252 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2021-01-22 20:25:46.272 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.h.ReplicationHandler Commits will be reserved for  10000
+2021-01-22 20:25:46.341 INFO  (searcherExecutor-7-thread-1-processing-x:maincore) [   x:maincore] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@4b60f2e3[maincore] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2021-01-22 20:25:46.341 INFO  (searcherExecutor-7-thread-1-processing-x:maincore) [   x:maincore] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-01-22 20:25:46.341 INFO  (searcherExecutor-7-thread-1-processing-x:maincore) [   x:maincore] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2021-01-22 20:25:46.349 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1689619945330049024
+2021-01-22 20:25:46.351 INFO  (searcherExecutor-7-thread-1-processing-x:maincore) [   x:maincore] o.a.s.c.SolrCore [maincore] Registered new searcher Searcher@4b60f2e3[maincore] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2021-01-22 20:25:46.359 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={name=maincore&action=CREATE&instanceDir=maincore&wt=json} status=0 QTime=18670
+2021-01-22 20:25:56.127 INFO  (qtp1282788025-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=36
+2021-01-22 20:26:10.271 INFO  (qtp1282788025-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611347170150} status=0 QTime=0
+2021-01-22 20:26:10.357 INFO  (qtp1282788025-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611347170151} status=0 QTime=82
+2021-01-22 20:26:10.440 INFO  (qtp1282788025-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611347170151} status=0 QTime=71
+2021-01-22 20:26:12.966 INFO  (qtp1282788025-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611347170150} status=0 QTime=0
+2021-01-22 20:26:12.980 INFO  (qtp1282788025-20) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1611347172951} status=0 QTime=9
+2021-01-22 20:26:12.983 INFO  (qtp1282788025-21) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/replication params={wt=json&command=details&_=1611347172951} status=0 QTime=9
+2021-01-22 20:26:12.986 INFO  (qtp1282788025-15) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1611347170151&ts=1611347170151} status=503 QTime=4
+2021-01-22 20:26:13.107 INFO  (qtp1282788025-22) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/admin/system params={wt=json&_=1611347172951} status=0 QTime=129
+2021-01-22 20:26:13.109 INFO  (qtp1282788025-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611347170151} status=0 QTime=142
+2021-01-22 20:26:15.203 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/admin/ping params={wt=json&_=1611347170151&ts=1611347170151} hits=0 status=0 QTime=43
+2021-01-22 20:26:15.204 INFO  (qtp1282788025-14) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/admin/ping params={wt=json&_=1611347170151&ts=1611347170151} status=0 QTime=44
+2021-01-22 20:26:16.334 INFO  (qtp1282788025-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611347170150} status=0 QTime=0
+2021-01-22 20:26:16.394 INFO  (qtp1282788025-16) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/admin/mbeans params={stats=true&wt=json&_=1611347176326} status=0 QTime=57
+2021-01-22 20:26:16.419 INFO  (qtp1282788025-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611347170151} status=0 QTime=81
+2021-01-22 20:26:17.963 INFO  (qtp1282788025-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611347170150} status=0 QTime=0
+2021-01-22 20:26:18.044 INFO  (qtp1282788025-35) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611347170151} status=0 QTime=80
+2021-01-22 20:26:19.751 INFO  (qtp1282788025-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611347170150} status=0 QTime=0
+2021-01-22 20:26:19.754 INFO  (qtp1282788025-19) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1611347172951} status=0 QTime=0
+2021-01-22 20:26:19.757 INFO  (qtp1282788025-17) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/replication params={wt=json&command=details&_=1611347172951} status=0 QTime=1
+2021-01-22 20:26:19.760 INFO  (qtp1282788025-23) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1611347170151&ts=1611347170151} status=503 QTime=0
+2021-01-22 20:26:19.882 INFO  (qtp1282788025-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611347170151} status=0 QTime=130
+2021-01-22 20:26:19.886 INFO  (qtp1282788025-21) [   x:maincore] o.a.s.c.S.Request [maincore]  webapp=/solr path=/admin/system params={wt=json&_=1611347172951} status=0 QTime=125

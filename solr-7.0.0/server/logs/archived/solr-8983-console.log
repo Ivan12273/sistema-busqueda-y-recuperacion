@@ -1,6 +1,6 @@
-2021-01-23 20:58:00.367 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.14.v20161028
-2021-01-23 20:58:01.322 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 7.0.0
-2021-01-23 20:58:01.323 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
-2021-01-23 20:58:01.323 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: C:\Users\ivana\OneDrive\Escritorio\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0, Default config dir: C:\Users\ivana\OneDrive\Escritorio\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr\configsets\_default\conf
-2021-01-23 20:58:01.364 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2021-01-23T20:58:01.327Z
-2021-01-23 20:58:01.366 INFO  (main) [   ] o.a.s.s.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+2021-01-26 22:45:16.568 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.14.v20161028
+2021-01-26 22:45:18.155 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 7.0.0
+2021-01-26 22:45:18.157 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2021-01-26 22:45:18.157 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: C:\xampp\htdocs\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0, Default config dir: C:\xampp\htdocs\ProyectoFinal\sistema-busqueda-y-recuperacion\solr-7.0.0\server\solr\configsets\_default\conf
+2021-01-26 22:45:18.188 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2021-01-26T22:45:18.160Z
+2021-01-26 22:45:18.190 INFO  (main) [   ] o.a.s.s.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE

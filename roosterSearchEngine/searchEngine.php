@@ -17,10 +17,6 @@ function search($keyword)
 
     //Contruir query expandida
     $query = makeExpandedQuery($newWords);
-    // $query = "http://localhost:8983/solr/maincore/select?q=nino";
-    // $query = "http://localhost:8983/solr/maincore/select?q=google!valley!adsense!adwords!yahoo!bin";
-
-    // echo ("QUERY: " .  $query);
 
     //Hacer petición
     $ch = curl_init("http://localhost:8983/solr/maincore/select?q=" . $keyword);
@@ -37,7 +33,6 @@ function search($keyword)
 
     //Transformar respuesta en array
     $responseArray = json_decode($response, true);
-    // echo ("<br>" . $response);
 
     //Sin resultados
     if ($responseArray["response"]["numFound"] == 0) {
@@ -100,7 +95,28 @@ function makeExpandedQuery($newWords)
     $buildQuery = substr($buildQuery, 0, -1);
 
     $query = $baseUrl . $buildQuery;
-    // echo ("QUERY: " .  $query);
 
     return $query;
+}
+
+function facetSearch($keyword, $facetKeyword)
+{
+    $ch = curl_init($GLOBALS['url'] . "facet.field=" . $facetKeyword . "&facet=on&q=" . $keyword);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+    $response = curl_exec($ch);
+    curl_close($ch);
+    if (!$response) {
+        return false;
+    }
+
+    $responseArray = json_decode($response, true);
+    foreach ($responseArray["facet_counts"]["facet_fields"][$facetKeyword] as $result) {
+        if (is_numeric($result)) {
+            echo "Número de apariciones: " . $result;
+        } else {
+            echo $result;
+        }
+        echo "<br>";
+    }
 }
