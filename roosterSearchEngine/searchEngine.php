@@ -31,6 +31,7 @@ function search($keyword)
 
     //Hacer petición
     //$ch = curl_init($GLOBALS['url'] . 'q=' . $keyword . $relevancy);
+    echo "". $query . $relevancy;
     $ch = curl_init("" . $query . $relevancy);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
@@ -86,12 +87,12 @@ function makeSemanticExpansion($keyword)
     $responseArray = json_decode($response2, true);
 
     $words = [];
-    array_push($words, $keyword);
+    array_push($words, urlencode($keyword));
 
     $i = 0;
     foreach ($responseArray as $el) {
         if ($i < 8) {
-            array_push($words, $el["word"]);
+            array_push($words, urlencode($el["word"]));
             $i++;
         }
     }
