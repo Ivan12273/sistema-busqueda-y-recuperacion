@@ -1,16 +1,27 @@
 <?php
 
+//Desactivar cors
+header('Access-Control-Allow-Origin: *');
+header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
+header("Allow: GET, POST, OPTIONS, PUT, DELETE");
+$method = $_SERVER['REQUEST_METHOD'];
+if ($method == "OPTIONS") {
+    die();
+}
+
+$url = "http://localhost:8983/solr/maincore/select?";
+
 function search($keyword)
 {
-    //Desactivar cors
-    header('Access-Control-Allow-Origin: *');
-    header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method");
-    header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
-    header("Allow: GET, POST, OPTIONS, PUT, DELETE");
-    $method = $_SERVER['REQUEST_METHOD'];
-    if ($method == "OPTIONS") {
-        die();
+    //Verifica si está seleccionado el checkbox
+    if(isset($_POST['relevancy'])){
+        $relevancy = "&sort=score%20asc";
+    } else {
+        $relevancy = "";
     }
+
+    $keyword = trim($keyword);
 
     //Hacer expansión semantica
     $newWords = makeSemanticExpansion($keyword);
@@ -19,8 +30,8 @@ function search($keyword)
     $query = makeExpandedQuery($newWords);
 
     //Hacer petición
-    $ch = curl_init("http://localhost:8983/solr/maincore/select?q=" . $keyword);
-    $ch = curl_init("" . $query);
+    //$ch = curl_init($GLOBALS['url'] . 'q=' . $keyword . $relevancy);
+    $ch = curl_init("" . $query . $relevancy);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
     $response = curl_exec($ch);
@@ -116,7 +127,17 @@ function makeExpandedQuery($newWords)
 
 function facetSearch($keyword, $facetKeyword)
 {
-    $ch = curl_init($GLOBALS['url'] . "facet.field=" . $facetKeyword . "&facet=on&q=" . $keyword);
+
+    //Verifica si está seleccionado el checkbox
+    if(isset($_POST['relevancy'])){
+        $relevancy = "&sort=score%20asc";
+    } else {
+        $relevancy = "";
+    }
+
+    $keyword = trim($keyword);
+
+    $ch = curl_init($GLOBALS['url'] . "facet.field=" . $facetKeyword . "&facet=on&q=" . $keyword . $relevancy);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
     $response = curl_exec($ch);

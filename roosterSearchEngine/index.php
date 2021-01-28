@@ -22,6 +22,8 @@
     </div>
     <br>
     <div class="keyword-wrapper">
+      <input type="checkbox" id="relevancy" name="relevancy" value="true">
+      <label for="relevancy">R.P. Ascendente</label>
       <input type="checkbox" id="facet" name="facet" value="true">
       <label for="facet">Busqueda facetada: </label>
       <input id="facet-input" name="facet-keyword" type="text" autocomplete="off" placeholder="Ingresa el campo..." />
