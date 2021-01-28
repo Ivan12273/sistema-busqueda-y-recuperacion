@@ -15,7 +15,7 @@ $url = "http://localhost:8983/solr/maincore/select?";
 function search($keyword)
 {
     //Verifica si está seleccionado el checkbox
-    if(isset($_POST['relevancy'])){
+    if (isset($_POST['relevancy'])) {
         $relevancy = "&sort=score%20asc";
     } else {
         $relevancy = "";
@@ -47,11 +47,12 @@ function search($keyword)
     $responseArray = json_decode($response, true);
 
     //Sin resultados
-    if ($responseArray["response"]["numFound"] == 0) {
+    $numResults = $responseArray["response"]["numFound"];
+    if ($numResults == 0) {
         echo ("No se encontro ningun documento que coincida con su busqueda.");
     }
-
     echo ("<div id='results' class='container'>");
+    echo ("<p>Se han encontrado " . $numResults . " resultados:</p>");
     foreach ($responseArray["response"]["docs"] as $result) {
         array_key_exists("title", $result) ? $author = $result["title"][0] : $author = 'Desconocido';
         array_key_exists("og_description", $result) ? $desc = $result["og_description"][0] : $desc = $result["title_str"][0];
@@ -89,7 +90,7 @@ function makeSemanticExpansion($keyword)
     $i = 0;
     foreach ($responseArray as $el) {
         if ($i < 8) {
-            array_push($words, $responseArray[$i]["word"]);
+            array_push($words, $el);
             $i++;
         }
     }
@@ -129,7 +130,7 @@ function facetSearch($keyword, $facetKeyword)
 {
 
     //Verifica si está seleccionado el checkbox
-    if(isset($_POST['relevancy'])){
+    if (isset($_POST['relevancy'])) {
         $relevancy = "&sort=score%20asc";
     } else {
         $relevancy = "";
