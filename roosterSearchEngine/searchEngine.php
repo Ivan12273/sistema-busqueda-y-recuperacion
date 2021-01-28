@@ -25,6 +25,7 @@ function search($keyword)
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
     $response = curl_exec($ch);
     curl_close($ch);
+    // echo ($response);
 
     if (!$response) {
         echo ("No se encontro ningun documento que coincida con su busqueda.");
@@ -39,12 +40,20 @@ function search($keyword)
         echo ("No se encontro ningun documento que coincida con su busqueda.");
     }
 
+    echo ("<div id='results' class='container'>");
     foreach ($responseArray["response"]["docs"] as $result) {
-        echo 'Result <br>';
-        array_key_exists("author", $result) ? var_dump($result["author"][0]) : 'No disponible';
-        array_key_exists("description", $result) ? var_dump($result["description"][0]) : 'No disponible';
-        array_key_exists("url", $result) ? var_dump($result["url"][0]) : 'No disponible';
+        array_key_exists("title", $result) ? $author = $result["title"][0] : $author = 'Desconocido';
+        array_key_exists("og_description", $result) ? $desc = $result["og_description"][0] : $desc = $result["title_str"][0];
+        array_key_exists("description", $result) ? $desc = $result["description"][0] : $desc = $result["title_str"][0];
+        array_key_exists("url", $result) ? $url = $result["url"][0] : $url = 'Desconocido';
+
+        echo ("<div class='content'>");
+        echo ("<small><strong>" . $url . "</strong></small>");
+        echo ("<a class='link' href='" . $url . "'>" . $author . "</a>");
+        echo ("<small class='desscription'>" . $desc . "</small>");
+        echo ("</div>");
     }
+    echo ("</div>");
 }
 
 // Devuelve un arreglo con 10 palabras nuevas para la expansión
@@ -62,12 +71,18 @@ function makeSemanticExpansion($keyword)
     $response2 = curl_exec($dm);
 
     $responseArray = json_decode($response2, true);
+
     $words = [];
     array_push($words, $keyword);
 
-    for ($i = 0; $i < 10; $i++) {
-        array_push($words, $responseArray[$i]["word"]);
+    $i = 0;
+    foreach ($responseArray as $el) {
+        if ($i < 8) {
+            array_push($words, $responseArray[$i]["word"]);
+            $i++;
+        }
     }
+
     return $words;
 }
 
@@ -95,7 +110,7 @@ function makeExpandedQuery($newWords)
     $buildQuery = substr($buildQuery, 0, -1);
 
     $query = $baseUrl . $buildQuery;
-
+    // echo ("<br>" . $query . "<br>");
     return $query;
 }
 

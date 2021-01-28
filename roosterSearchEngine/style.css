@@ -1,18 +1,23 @@
 /*autoprefixer used*/
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box
 }
-html, body {
+
+html,
+body {
   /*this will give a vertical scrollbar by default, so there isn't a little jump when you start entering search terms*/
   height: calc(100%)
 }
+
 body {
   font: 100% 'Arimo', sans-serif;
 }
 
-input[type=checkbox] + label {
+input[type=checkbox]+label {
   display: block;
   margin: 0.2em;
   cursor: pointer;
@@ -24,9 +29,10 @@ input[type=checkbox] {
   display: none;
 }
 
-input[type=checkbox] + label:before {
+input[type=checkbox]+label:before {
   content: "\2714";
-  border: 0.1em solid rgb(165, 165, 165);;
+  border: 0.1em solid rgb(165, 165, 165);
+  ;
   border-radius: 0.2em;
   display: inline-block;
   width: 1.5em;
@@ -39,22 +45,22 @@ input[type=checkbox] + label:before {
   transition: .2s;
 }
 
-input[type=checkbox] + label:active:before {
+input[type=checkbox]+label:active:before {
   transform: scale(0);
 }
 
-input[type=checkbox]:checked + label:before {
+input[type=checkbox]:checked+label:before {
   background-color: rgb(103, 115, 223);
   border-color: rgb(103, 115, 223);
   color: #fff;
 }
 
-input[type=checkbox]:disabled + label:before {
+input[type=checkbox]:disabled+label:before {
   transform: scale(1);
   border-color: #aaa;
 }
 
-input[type=checkbox]:checked:disabled + label:before {
+input[type=checkbox]:checked:disabled+label:before {
   transform: scale(1);
   background-color: #bfb;
   border-color: #bfb;
@@ -67,28 +73,35 @@ input[type=checkbox]:checked:disabled + label:before {
   outline: none;
   transition: border 0.5s ease-in-out;
 }
+
 #facet-input:focus {
-  border-top-color: rgba(0,0,0,0);
-  border-left-color: rgba(0,0,0,0);
-  border-right-color: rgba(0,0,0,0);
+  border-top-color: rgba(0, 0, 0, 0);
+  border-left-color: rgba(0, 0, 0, 0);
+  border-right-color: rgba(0, 0, 0, 0);
 }
+
 .image-logo {
   margin-bottom: 20px;
 }
-.filter-wrapper, .keyword-wrapper {
+
+.filter-wrapper,
+.keyword-wrapper {
   display: flex;
   justify-content: center;
 }
+
 .filter-wrapper {
   min-height: 80%;
   flex-flow: column wrap;
   align-items: center;
   position: relative
 }
+
 .keyword-wrapper {
   width: 100%;
   position: relative;
 }
+
 #keyword {
   border: 1px solid #ccc;
   padding: 10px;
@@ -97,11 +110,13 @@ input[type=checkbox]:checked:disabled + label:before {
   outline: none;
   transition: border 0.5s ease-in-out
 }
+
 #keyword:focus {
-  border-top-color: rgba(0,0,0,0);
-  border-left-color: rgba(0,0,0,0);
-  border-right-color: rgba(0,0,0,0);
+  border-top-color: rgba(0, 0, 0, 0);
+  border-left-color: rgba(0, 0, 0, 0);
+  border-right-color: rgba(0, 0, 0, 0);
 }
+
 #keyword-button {
   position: absolute;
   right: 26%;
@@ -110,14 +125,16 @@ input[type=checkbox]:checked:disabled + label:before {
   font-size: 1.7em;
   color: #8DB9ED
 }
+
 #keyword-button:hover {
   color: #ccc
 }
+
 .filter-select {
   width: 50%;
   list-style: none;
   font-size: 1.1em;
-  color: rgb(105,105,105);
+  color: rgb(105, 105, 105);
   border: 1px solid #ccc;
   border-top: none;
   /*so things don't jump around*/
@@ -130,48 +147,92 @@ input[type=checkbox]:checked:disabled + label:before {
   overflow-y: auto;
   background: #fff
 }
+
 .filter-select-list {
   cursor: pointer;
   padding: 5px 10px;
 }
+
 .filter-select-list:hover {
-  background: rgb(155,155,155);
+  background: rgb(155, 155, 155);
   color: #fff
 }
+
 .no-value {
   border: none
 }
-.list-highlight, .list-highlight:hover {
-  background: rgb(55,55,55);
+
+.list-highlight,
+.list-highlight:hover {
+  background: rgb(55, 55, 55);
   color: #fff
 }
+
 /*some simple responsive designs*/
 @media only screen and (max-width: 768px) {
-  
-  .filter-select, #keyword {
+
+  .filter-select,
+  #keyword {
     width: 80%;
   }
+
   #keyword {
     font-size: 1.3em
   }
+
   .filter-select {
     font-size: 0.9em;
     left: 10%;
     top: calc(50% + 23px);
   }
+
   #keyword-button {
     right: 11%
   }
 }
+
 @media only screen and (max-width: 480px) {
-  
-  .filter-select, #keyword {
+
+  .filter-select,
+  #keyword {
     width: 95%;
   }
+
   .filter-select {
     left: 2.5%;
   }
+
   #keyword-button {
     right: 3.5%
   }
+}
+
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 25px 0px;
+}
+
+.content * {
+  margin: 3px 0px;
+}
+
+.link {
+  font-size: 1.5rem;
+  width: fit-content;
+  /* margin-right: 0 !important; */
+}
+
+.desscription {
+  color: #717171;
 }
