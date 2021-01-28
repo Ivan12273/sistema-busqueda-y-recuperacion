@@ -90,7 +90,7 @@ function makeSemanticExpansion($keyword)
     $i = 0;
     foreach ($responseArray as $el) {
         if ($i < 8) {
-            array_push($words, $el);
+            array_push($words, $el["word"]);
             $i++;
         }
     }
