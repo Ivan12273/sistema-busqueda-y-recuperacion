@@ -50,6 +50,7 @@ function search($keyword)
     $numResults = $responseArray["response"]["numFound"];
     if ($numResults == 0) {
         echo ("No se encontro ningun documento que coincida con su busqueda.");
+        return false;
     }
     echo ("<div id='results' class='container'>");
     echo ("<p>Se han encontrado " . $numResults . " resultados:</p>");
