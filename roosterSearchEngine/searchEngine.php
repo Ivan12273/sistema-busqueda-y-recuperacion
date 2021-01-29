@@ -23,6 +23,9 @@ function search($keyword)
 
     $keyword = trim($keyword);
 
+    //Sugerencia de corrección
+    makeCorrectionSuggestion($keyword);
+
     //Hacer expansión semantica
     $newWords = makeSemanticExpansion($keyword);
 
@@ -98,6 +101,37 @@ function makeSemanticExpansion($keyword)
     }
 
     return $words;
+}
+
+function makeCorrectionSuggestion($keyword)
+{
+    
+    $query = "https://api.datamuse.com/words?sl=" . $keyword . "&v=es";
+
+    $dm = curl_init($query);
+    curl_setopt($dm, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($dm, CURLOPT_CUSTOMREQUEST, "GET");
+    $response2 = curl_exec($dm);
+
+    $responseArray = json_decode($response2, true);
+
+    $words = [];    
+
+    $i = 0;
+    foreach ($responseArray as $el) {
+        if ($i < 8) {            
+            array_push($words, urlencode($el["word"]));
+            $i++;
+        }
+    }
+
+    if($keyword != $words[0]){
+        echo "<form method='POST'>";
+        echo "¿Habrás querido decir ";
+        echo "<input type='submit' name='keyword' class='query-correction' name='query' value='$words[0]' />";
+        echo "?<br><br>";
+        echo "</form>";  
+    }
 }
 
 
