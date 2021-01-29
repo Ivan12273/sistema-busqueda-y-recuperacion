@@ -33,14 +33,11 @@ function search($keyword)
     $query = makeExpandedQuery($newWords);
 
     //Hacer petición
-    //$ch = curl_init($GLOBALS['url'] . 'q=' . $keyword . $relevancy);
-    echo "". $query . $relevancy;
     $ch = curl_init("" . $query . $relevancy);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
     $response = curl_exec($ch);
     curl_close($ch);
-    // echo ($response);
 
     if (!$response) {
         echo ("No se encontro ningun documento que coincida con su busqueda.");
@@ -120,7 +117,7 @@ function makeCorrectionSuggestion($keyword)
     $i = 0;
     foreach ($responseArray as $el) {
         if ($i < 8) {            
-            array_push($words, urlencode($el["word"]));
+            array_push($words, $el["word"]);
             $i++;
         }
     }
@@ -179,17 +176,37 @@ function facetSearch($keyword, $facetKeyword)
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
     $response = curl_exec($ch);
     curl_close($ch);
+
     if (!$response) {
+        echo ("No se encontraron resultados en la búsqueda facetada.");
         return false;
     }
 
     $responseArray = json_decode($response, true);
-    foreach ($responseArray["facet_counts"]["facet_fields"][$facetKeyword] as $result) {
-        if (is_numeric($result)) {
-            echo "Número de apariciones: " . $result;
-        } else {
-            echo $result;
-        }
-        echo "<br>";
+
+    //Sin resultados
+    $numResults = $responseArray["response"]["numFound"];
+    if ($numResults == 0) {
+        echo ("No se encontraron resultados en la búsqueda facetada.");
+        return false;
     }
+
+    if(array_key_exists("facet_counts", $responseArray)) {
+        echo ("<div id='results' class='container'>");
+        echo ("<p>Resultados de búsqueda facetada: </p>");
+        foreach ($responseArray["facet_counts"]["facet_fields"][$facetKeyword] as $result) {
+            if (is_int($result)) {
+                echo ("<small class='desscription'>Número de resultados: " . $result . "</small>");
+                echo ("</div>");
+            } else {
+                echo ("<div class='content'>");
+                echo ("<a class='link'>" . $result . "</a>");
+            }
+            
+        } 
+    } else {
+        echo ("No se encontraron resultados en la búsqueda facetada.");
+        return false;
+    }
+    echo ("</div>");
 }
