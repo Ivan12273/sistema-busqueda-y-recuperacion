@@ -77,7 +77,8 @@ function makeSemanticExpansion($keyword)
     // Expansión en español
     // $query = "https://api.datamuse.com/words?ml=" . $keyword . "&v=es";
     //Expansión en ingles
-    $query = "https://api.datamuse.com/words?ml=" . $keyword;
+    $keyword = str_replace(' ', '+', $keyword);
+    $query = "https://api.datamuse.com/words?ml=" . $keyword . "&v=es";
 
     $dm = curl_init($query);
     curl_setopt($dm, CURLOPT_RETURNTRANSFER, true);
@@ -102,7 +103,7 @@ function makeSemanticExpansion($keyword)
 
 function makeCorrectionSuggestion($keyword)
 {
-    
+    $keyword = str_replace(' ', '+', $keyword);
     $query = "https://api.datamuse.com/words?sl=" . $keyword . "&v=es";
 
     $dm = curl_init($query);
