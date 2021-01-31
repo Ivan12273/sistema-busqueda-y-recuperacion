@@ -31,7 +31,7 @@ function search($keyword)
 
     //Hacer petición
     //$ch = curl_init($GLOBALS['url'] . 'q=' . $keyword . $relevancy);
-    echo "". $query . $relevancy;
+    // echo "" . $query . $relevancy;
     $ch = curl_init("" . $query . $relevancy);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
@@ -75,9 +75,9 @@ function makeSemanticExpansion($keyword)
 {
 
     // Expansión en español
-    // $query = "https://api.datamuse.com/words?ml=" . $keyword . "&v=es";
+    $query = "https://api.datamuse.com/words?ml=" . $keyword . "&v=es";
     //Expansión en ingles
-    $query = "https://api.datamuse.com/words?ml=" . $keyword;
+    // $query = "https://api.datamuse.com/words?ml=" . $keyword;
 
     $dm = curl_init($query);
     curl_setopt($dm, CURLOPT_RETURNTRANSFER, true);
