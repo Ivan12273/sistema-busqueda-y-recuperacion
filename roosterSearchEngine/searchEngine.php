@@ -23,6 +23,9 @@ function search($keyword)
 
     $keyword = trim($keyword);
 
+    //Sugerencia de corrección
+    makeCorrectionSuggestion($keyword);
+
     //Hacer expansión semantica
     $newWords = makeSemanticExpansion($keyword);
 
@@ -30,14 +33,11 @@ function search($keyword)
     $query = makeExpandedQuery($newWords);
 
     //Hacer petición
-    //$ch = curl_init($GLOBALS['url'] . 'q=' . $keyword . $relevancy);
-    // echo "" . $query . $relevancy;
     $ch = curl_init("" . $query . $relevancy);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
     $response = curl_exec($ch);
     curl_close($ch);
-    // echo ($response);
 
     if (!$response) {
         echo ("No se encontro ningun documento que coincida con su busqueda.");
@@ -74,10 +74,13 @@ function search($keyword)
 function makeSemanticExpansion($keyword)
 {
 
+    $keyword = str_replace(' ', '+', $keyword);
+
     // Expansión en español
     $query = "https://api.datamuse.com/words?ml=" . $keyword . "&v=es";
     //Expansión en ingles
-    // $query = "https://api.datamuse.com/words?ml=" . $keyword;
+    // $query = "https://api.datamuse.com/words?ml=" . $keyword . "&v=en";
+
 
     $dm = curl_init($query);
     curl_setopt($dm, CURLOPT_RETURNTRANSFER, true);
@@ -98,6 +101,37 @@ function makeSemanticExpansion($keyword)
     }
 
     return $words;
+}
+
+function makeCorrectionSuggestion($keyword)
+{
+    $keyword = str_replace(' ', '+', $keyword);
+    $query = "https://api.datamuse.com/words?sl=" . $keyword . "&v=es";
+
+    $dm = curl_init($query);
+    curl_setopt($dm, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($dm, CURLOPT_CUSTOMREQUEST, "GET");
+    $response2 = curl_exec($dm);
+
+    $responseArray = json_decode($response2, true);
+
+    $words = [];
+
+    $i = 0;
+    foreach ($responseArray as $el) {
+        if ($i < 8) {
+            array_push($words, $el["word"]);
+            $i++;
+        }
+    }
+
+    if ($keyword != $words[0]) {
+        echo "<form method='POST'>";
+        echo "¿Habrás querido decir ";
+        echo "<input type='submit' name='keyword' class='query-correction' name='query' value='$words[0]' />";
+        echo "?<br><br>";
+        echo "</form>";
+    }
 }
 
 
@@ -145,17 +179,36 @@ function facetSearch($keyword, $facetKeyword)
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
     $response = curl_exec($ch);
     curl_close($ch);
+
     if (!$response) {
+        echo ("No se encontraron resultados en la búsqueda facetada.");
         return false;
     }
 
     $responseArray = json_decode($response, true);
-    foreach ($responseArray["facet_counts"]["facet_fields"][$facetKeyword] as $result) {
-        if (is_numeric($result)) {
-            echo "Número de apariciones: " . $result;
-        } else {
-            echo $result;
-        }
-        echo "<br>";
+
+    //Sin resultados
+    $numResults = $responseArray["response"]["numFound"];
+    if ($numResults == 0) {
+        echo ("No se encontraron resultados en la búsqueda facetada.");
+        return false;
     }
+
+    if (array_key_exists("facet_counts", $responseArray)) {
+        echo ("<div id='results' class='container'>");
+        echo ("<p>Resultados de búsqueda facetada: </p>");
+        foreach ($responseArray["facet_counts"]["facet_fields"][$facetKeyword] as $result) {
+            if (is_int($result)) {
+                echo ("<small class='desscription'>Número de resultados: " . $result . "</small>");
+                echo ("</div>");
+            } else {
+                echo ("<div class='content'>");
+                echo ("<a class='link'>" . $result . "</a>");
+            }
+        }
+    } else {
+        echo ("No se encontraron resultados en la búsqueda facetada.");
+        return false;
+    }
+    echo ("</div>");
 }

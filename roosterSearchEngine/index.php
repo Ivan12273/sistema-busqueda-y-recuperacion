@@ -43,6 +43,7 @@
   if (isset($_POST['facet'])) {
     $keyword = $_POST["keyword"];
     $facetKeyword = $_POST["facet-keyword"];
+    echo search($keyword);
     echo facetSearch($keyword, $facetKeyword);
   }
   ?>
