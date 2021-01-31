@@ -23,6 +23,9 @@ function search($keyword)
 
     $keyword = trim($keyword);
 
+    //Se quitan las palabras vacías
+    $keyword = removeStopWords($keyword);
+
     //Sugerencia de corrección
     makeCorrectionSuggestion($keyword);
 
@@ -50,7 +53,9 @@ function search($keyword)
     //Sin resultados
     $numResults = $responseArray["response"]["numFound"];
     if ($numResults == 0) {
-        echo ("No se encontro ningun documento que coincida con su busqueda.");
+        echo ("<div class='container'");
+        echo ("<p>No se encontro ningun documento que coincida con su busqueda.</p>");
+        echo ("</div>");
         return false;
     }
     echo ("<div id='results' class='container'>");
@@ -126,10 +131,10 @@ function makeCorrectionSuggestion($keyword)
     }
 
     if ($keyword != $words[0]) {
-        echo "<form method='POST'>";
-        echo "¿Habrás querido decir ";
-        echo "<input type='submit' name='keyword' class='query-correction' name='query' value='$words[0]' />";
-        echo "?<br><br>";
+        echo "<form method='POST'class='container'>";
+        echo "<p>¿Habrás querido decir ";
+        echo "<input type='submit' name='keyword' class='query-correction' name='query' value='$words[0]'/>?</p>";
+        echo "<br><br>";
         echo "</form>";
     }
 }
@@ -211,4 +216,30 @@ function facetSearch($keyword, $facetKeyword)
         return false;
     }
     echo ("</div>");
+}
+
+function removeStopWords($keyword)
+{
+    $stopWords = [];
+    $handle = fopen("../stop-words.txt", "r");
+    if ($handle) {
+        while (($line = fgets($handle)) !== false) {
+            $line = trim($line);
+            array_push($stopWords, $line);
+        }
+        fclose($handle);
+    }
+
+    $words = explode(' ', $keyword);
+
+    for ($i = 0; $i < sizeof($words); $i++) {
+
+        if (in_array($words[$i], $stopWords)) {
+            unset($words[$i]);
+        }
+    }
+
+    $kword = implode(" ", $words);
+
+    return $kword;
 }
