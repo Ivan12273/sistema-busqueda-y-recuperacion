@@ -27,6 +27,13 @@
       <input type="checkbox" id="facet" name="facet" value="true">
       <label for="facet">Busqueda facetada: </label>
       <input id="facet-input" name="facet-keyword" type="text" autocomplete="off" placeholder="Ingresa el campo..." />
+      <!-- <label for="boolean-input">Opeador booleano </label> -->
+      <select name="boolean-input" id="boolean-input">
+        <option value=" ">...</option>
+        <option value="||">OR</option>
+        <option value="&&">AND</option>
+        <option value="!">NOT</option>
+      </select>
     </div>
     <ul id="filter-select" class="filter-select no-value"></ul>
   </form>

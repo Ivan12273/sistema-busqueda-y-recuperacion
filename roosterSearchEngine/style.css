@@ -247,3 +247,10 @@ input[type=checkbox]:checked:disabled+label:before {
   color: blue;
   font-size: 16px;
 }
+
+
+/* SELECT */
+
+select {
+  margin: 0px 25px;
+}

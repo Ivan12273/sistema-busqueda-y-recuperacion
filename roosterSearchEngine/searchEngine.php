@@ -21,6 +21,14 @@ function search($keyword)
         $relevancy = "";
     }
 
+    //Valor de busqueda booleana
+    if (isset($_POST['boolean-input'])) {
+        $bool = $_POST['boolean-input'];
+        // echo ("Booleano: " . $bool);
+    } else {
+        $bool = " ";
+    }
+
     $keyword = trim($keyword);
 
     //Se quitan las palabras vacías
@@ -29,17 +37,26 @@ function search($keyword)
     //Sugerencia de corrección
     makeCorrectionSuggestion($keyword);
 
-    //Hacer expansión semantica
-    $newWords = makeSemanticExpansion($keyword);
+    //Operación booleana
+    if ($bool == " ") {
+        //Hacer expansión semantica
+        $newWords = makeSemanticExpansion($keyword);
 
-    //Contruir query expandida
-    $query = makeExpandedQuery($newWords);
+        //Contruir query expandida
+        $query = makeExpandedQuery($newWords);
+    } else {
+        //Construir query booleana
+        $query = makeBoolQuery($keyword, $bool);
+    }
+
+    // echo ("<br>" . $query);
 
     //Hacer petición
     $ch = curl_init("" . $query . $relevancy);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
     $response = curl_exec($ch);
+    // echo ("<br>" . $response);
     curl_close($ch);
 
     if (!$response) {
@@ -51,7 +68,12 @@ function search($keyword)
     $responseArray = json_decode($response, true);
 
     //Sin resultados
-    $numResults = $responseArray["response"]["numFound"];
+    if (isset($responseArray["response"]["numFound"])) {
+        $numResults = $responseArray["response"]["numFound"];
+    } else {
+        $numResults = 0;
+    }
+
     if ($numResults == 0) {
         echo ("<div class='container'");
         echo ("<p>No se encontro ningun documento que coincida con su busqueda.</p>");
@@ -99,7 +121,7 @@ function makeSemanticExpansion($keyword)
 
     $i = 0;
     foreach ($responseArray as $el) {
-        if ($i < 8) {
+        if ($i < 2) {
             array_push($words, urlencode($el["word"]));
             $i++;
         }
@@ -154,13 +176,13 @@ function makeExpandedQuery($newWords)
                 $newWord = $newWord . $wrd . "+";
             }
             $word = substr($newWord, 0, -1);
-            $buildQuery = $buildQuery . $word . "!";
+            $buildQuery = $buildQuery . $word . "||";
         } else {
-            $buildQuery = $buildQuery . $word . "!";
+            $buildQuery = $buildQuery . $word . "||";
         }
     }
 
-    $buildQuery = substr($buildQuery, 0, -1);
+    $buildQuery = substr($buildQuery, 0, -2);
 
     $query = $baseUrl . $buildQuery;
     // echo ("<br>" . $query . "<br>");
@@ -242,4 +264,47 @@ function removeStopWords($keyword)
     $kword = implode(" ", $words);
 
     return $kword;
+}
+
+// function crawlDocument()
+// {
+
+//     $url = "http://localhost:8983/solr/maincore/update/extract?stream.file=https://www.minecraft.net/es-es/&literal.id=https://www.minecraft.net/es-es/ -out yes";
+
+//     $ch = curl_init($url);
+//     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+//     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+//     $response = curl_exec($ch);
+//     curl_close($ch);
+
+//     echo ($response);
+
+//     // echo curl_exec($ch);
+//     // curl_close($ch);
+// }
+
+function makeBoolQuery($keyword, $operator)
+{
+
+    $baseUrl = "http://localhost:8983/solr/maincore/select?q=";
+
+    $words = explode(" ", $keyword);
+
+    if (sizeof($words) > 1) {
+        $preQuery = "";
+        foreach ($words as $key => $word) {
+            if ($key != sizeof($words) - 1) {
+                $preQuery = $preQuery . $word . $operator;
+            } else {
+                $preQuery = $preQuery . $word;
+            }
+        }
+        $preQuery = urlencode($preQuery);
+        $query = $baseUrl . $preQuery;
+    } else {
+        $query = $baseUrl . $keyword;
+    }
+
+    // echo ("<br>" . $query);
+    return $query;
 }
